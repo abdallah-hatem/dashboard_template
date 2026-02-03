@@ -1,7 +1,87 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactCompiler: true,
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+  cacheComponents: true,
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "dev-api.realestate.gov.eg",
+      },
+    ],
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "100mb",
+    },
+    proxyClientMaxBodySize: 5 * 1024 * 1024,
+    turbopackFileSystemCacheForDev: true,
+  },
+  // output: "standalone",
+  httpAgentOptions: {
+    keepAlive: true,
+  },
+  compiler: {
+    // removeConsole: process.env.NODE_ENV === "production",
+  },
+  async headers() {
+    return [
+      {
+        source:
+          "/:all*(svg|png|jpg|jpeg|gif|webp|ico|mp4|mp3|woff|woff2|ttf|otf)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/image",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-XSS-Protection", value: "1; mode=block" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          ...(process.env.NODE_ENV === "production"
+            ? [
+              {
+                key: "Strict-Transport-Security",
+                value: "max-age=31536000; includeSubDomains; preload",
+              },
+            ]
+            : []),
+        ],
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

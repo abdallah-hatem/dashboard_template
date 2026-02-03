@@ -1,0 +1,99 @@
+﻿
+> market_place_admin_panel@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack, Cache Components)
+- Environments: .env
+- Experiments (use with caution):
+  ┬╖ proxyClientMaxBodySize: 5242880
+  ┬╖ serverActions
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 6.5s
+  Running TypeScript ...
+node.exe : Failed to compile.
+At line:1 char:1
++ & "C:\nvm4w\nodejs/node.exe" "
+C:\nvm4w\nodejs/node_modules/npm
+/bin/np ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : N 
+   otSpecified: (Failed to com  
+  pile.:String) [], RemoteExc   
+ eption
+    + FullyQualifiedErrorId : N 
+   ativeCommandError
+ 
+
+.next/dev/types/validator.ts:76:
+31
+Type error: Type 'typeof import(
+"C:/Users/ahkor/Desktop/projects
+/market_place_admin_panel/src/ap
+p/layout")' does not satisfy 
+the constraint 
+'LayoutConfig<"/">'.
+  Types of property 'default' 
+are incompatible.
+    Type '({ children, params, 
+}: Readonly<RootLayoutProps>) 
+=> Promise<Element>' is not 
+assignable to type 'ComponentTyp
+e<LayoutProps<"/">> | ((props: 
+LayoutProps<"/">) => void | 
+Promise<void> | ReactNode | 
+Promise<ReactNode>)'.
+      Type '({ children, 
+params, }: 
+Readonly<RootLayoutProps>) => 
+Promise<Element>' is not 
+assignable to type 'FunctionComp
+onent<LayoutProps<"/">>'.
+        Types of parameters 
+'__0' and 'props' are 
+incompatible.
+          Type 
+'LayoutProps<"/">' is not 
+assignable to type 
+'Readonly<RootLayoutProps>'.
+            Types of property 
+'params' are incompatible.
+              Type 
+'Promise<{}>' is not assignable 
+to type 'Promise<{ locale: 
+string; }>'.
+                Property 
+'locale' is missing in type 
+'{}' but required in type '{ 
+locale: string; }'.
+
+[0m [90m 74 |[39m   type __Is
+Expected[33m<[39m[33mSpecific
+[39m [36mextends[39m [33mLay
+outConfig[39m[33m<[39m[32m"/
+"[39m[33m>>[39m [33m=[39m 
+[33mSpecific[39m
+ [90m 75 |[39m   
+[36mconst[39m handler 
+[33m=[39m {} [36mas[39m 
+[36mtypeof[39m [36mimport[39
+m([32m"../../../src/app/layout.
+js"[39m)
+[31m[1m>[22m[39m[90m 76 
+|[39m   type __Check 
+[33m=[39m __IsExpected[33m<[
+39m[36mtypeof[39m 
+handler[33m>[39m
+ [90m    |[39m                
+               
+[31m[1m^[22m[39m
+ [90m 77 |[39m   [90m// 
+@ts-ignore[39m
+ [90m 78 |[39m   type 
+__Unused [33m=[39m __Check
+ [90m 79 |[39m }[0m
+Next.js build worker exited 
+with code: 1 and signal: null
+

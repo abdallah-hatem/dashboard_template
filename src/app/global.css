@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff0000;
+  --color-primary-dark: #D00000;
+  --color-secondary: #9333ea;
+  --color-tertiary: #14b8a6;
+  --app-max-width: 1540px;
+  --main-container-px: 1.5rem;
+  --app-max-width: 1340px;
+  --main-container-px: 35px;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-fade-in-right: fade-in-right 0.6s ease-out forwards;
+}
+
+.main-container {
+  max-width: var(--app-max-width);
+  margin: 0 auto;
+  /* padding: 0 1rem; */
+}
+
+.custom-select .ant-select-selector {
+  border-radius: 50px !important;
+
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+/* Ensure proper Arabic number display */
+[dir="rtl"] .ant-input-number,
+[dir="rtl"] input[type="number"],
+[dir="rtl"] input[type="tel"] {
+  direction: ltr;
+  text-align: right;
+  /* border-radius: 12px; */
+}
+
+/* For modern browsers */
+.hide-scrollbar {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Custom Scrollbar Styles for Ant Design Table */
+.ant-table-container::-webkit-scrollbar,
+.ant-table-body::-webkit-scrollbar,
+.ant-table-content::-webkit-scrollbar {
+  width: 8px;
+  /* Width of vertical scrollbar */
+  height: 8px;
+  /* Height of horizontal scrollbar */
+}
+
+.ant-table-container::-webkit-scrollbar-track,
+.ant-table-body::-webkit-scrollbar-track,
+.ant-table-content::-webkit-scrollbar-track {
+  background: #f7fafc;
+  /* Track color */
+  border-radius: 4px;
+}
+
+.ant-table-container::-webkit-scrollbar-thumb,
+.ant-table-body::-webkit-scrollbar-thumb,
+.ant-table-content::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  /* Thumb color */
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.ant-table-container::-webkit-scrollbar-thumb:hover,
+.ant-table-body::-webkit-scrollbar-thumb:hover,
+.ant-table-content::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+  /* Thumb color on hover */
+}
+
+.ant-table-container::-webkit-scrollbar-corner,
+.ant-table-body::-webkit-scrollbar-corner,
+.ant-table-content::-webkit-scrollbar-corner {
+  background: #f7fafc;
+  /* Corner where scrollbars meet */
+}
+
+/* Remove scrollbar arrows - Comprehensive approach */
+.ant-table-container::-webkit-scrollbar-button,
+.ant-table-body::-webkit-scrollbar-button,
+.ant-table-content::-webkit-scrollbar-button,
+.ant-table-wrapper::-webkit-scrollbar-button,
+.ant-table::-webkit-scrollbar-button {
+  display: none !important;
+  /* Hide scrollbar arrows */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Remove scrollbar arrows for all directions */
+.ant-table-container::-webkit-scrollbar-button:start:decrement,
+.ant-table-container::-webkit-scrollbar-button:end:increment,
+.ant-table-body::-webkit-scrollbar-button:start:decrement,
+.ant-table-body::-webkit-scrollbar-button:end:increment,
+.ant-table-content::-webkit-scrollbar-button:start:decrement,
+.ant-table-content::-webkit-scrollbar-button:end:increment,
+.ant-table-wrapper::-webkit-scrollbar-button:start:decrement,
+.ant-table-wrapper::-webkit-scrollbar-button:end:increment,
+.ant-table::-webkit-scrollbar-button:start:decrement,
+.ant-table::-webkit-scrollbar-button:end:increment {
+  display: none !important;
+  /* Hide all scrollbar arrows */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Additional comprehensive arrow removal */
+.ant-table-container::-webkit-scrollbar-button:vertical:start:decrement,
+.ant-table-container::-webkit-scrollbar-button:vertical:end:increment,
+.ant-table-container::-webkit-scrollbar-button:horizontal:start:decrement,
+.ant-table-container::-webkit-scrollbar-button:horizontal:end:increment,
+.ant-table-body::-webkit-scrollbar-button:vertical:start:decrement,
+.ant-table-body::-webkit-scrollbar-button:vertical:end:increment,
+.ant-table-body::-webkit-scrollbar-button:horizontal:start:decrement,
+.ant-table-body::-webkit-scrollbar-button:horizontal:end:increment,
+.ant-table-content::-webkit-scrollbar-button:vertical:start:decrement,
+.ant-table-content::-webkit-scrollbar-button:vertical:end:increment,
+.ant-table-content::-webkit-scrollbar-button:horizontal:start:decrement,
+.ant-table-content::-webkit-scrollbar-button:horizontal:end:increment {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Firefox scrollbar styles for Ant Design Table */
+.ant-table-container,
+.ant-table-body,
+.ant-table-content {
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #cbd5e0 #f7fafc;
+  /* Firefox: thumb and track colors */
+}
+
+
+
+
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@utility animate-fade-in-right {
+  animation: fade-in-right 0.6s ease-out forwards;
+}
+
+@utility animate-fade-in-right-delayed {
+  animation: fade-in-right 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Swiper Fade Up Animation */
+@keyframes swiperFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
