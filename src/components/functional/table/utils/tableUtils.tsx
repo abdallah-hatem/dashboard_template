@@ -42,7 +42,7 @@ export const buildDefaultActions = ({
         <Popconfirm
           placement="topLeft"
           title={t("delete_confirmation")}
-          description={t("are_you_sure_you_want_to_delete_this_item")}
+          description={t("delete_confirmation_description")}
           okText={t("yes")}
           cancelText={t("no")}
           okType="danger"

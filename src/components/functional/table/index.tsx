@@ -113,10 +113,6 @@ export interface ITableProps<T = any> {
   genericFilters?: GenericFilterProps[];
   rowSelection?: TableProps<T>["rowSelection"];
   onRow?: (record: T, index?: number) => React.HTMLAttributes<any>;
-  // Grid view props
-  showGridToggle?: boolean;
-  gridRenderItem?: (record: T, index: number) => React.ReactNode;
-  defaultView?: "table" | "grid";
   emptyStateTitle?: string;
   emptyStateDescription?: string;
   emptyStateIcon?: React.ReactNode;
@@ -196,12 +192,9 @@ const Table = <T extends object>({
   genericFilters,
   rowSelection,
   onRow,
-
-  gridRenderItem,
   emptyStateTitle,
   emptyStateDescription,
   emptyStateIcon,
-  defaultView = "table",
   advancedFilters,
   hasFilters,
   searchPlaceholder,

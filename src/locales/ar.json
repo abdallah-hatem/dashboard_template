@@ -20,5 +20,11 @@
     "branchPhonePlaceholder": "أدخل رقم الهاتف",
     "branchAddressPlaceholder": "أدخل عنوان الفرع",
     "branches_title": "لم يتم العثور على فروع",
-    "branches_description": "ابدأ بإنشاء فرعك الأول لإدارة مؤسستك"
+    "branches_description": "ابدأ بإنشاء فرعك الأول لإدارة مؤسستك",
+    "edit": "تعديل",
+    "delete_confirmation": "هل أنت متأكد أنك تريد حذف هذا العنصر؟",
+    "confirm": "تأكيد",
+    "delete_confirmation_description": "لا يمكن التراجع عن هذا الإجراء.",
+    "yes": "نعم",
+    "no": "لا"
 }

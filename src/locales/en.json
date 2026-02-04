@@ -20,5 +20,11 @@
     "branchPhonePlaceholder": "Enter phone number",
     "branchAddressPlaceholder": "Enter branch address",
     "branches_title": "No Branches Found",
-    "branches_description": "Start by creating your first branch to manage your organization"
+    "branches_description": "Start by creating your first branch to manage your organization",
+    "edit": "Edit",
+    "delete_confirmation": "Are you sure you want to delete this item?",
+    "confirm": "Confirm",
+    "delete_confirmation_description": "This action cannot be undone.",
+    "yes": "Yes",
+    "no": "No"
 }
