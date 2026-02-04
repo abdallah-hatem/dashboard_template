@@ -1,0 +1,274 @@
+/* Ant Design Form Input Styling */
+
+/* OTP Input specific styling - override global rounded inputs */
+.ant-input-otp,
+.ant-input-otp .ant-input,
+.ant-input-otp input,
+.ant-otp .ant-input,
+.ant-otp input {
+  border-radius: 14px !important;
+  height: 48px !important;
+  width: 48px !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: white !important;
+  box-shadow: none !important;
+}
+
+/* OTP Focus state */
+.ant-input-otp .ant-input:focus,
+.ant-otp .ant-input:focus,
+.ant-input-otp input:focus,
+.ant-otp input:focus {
+  border-color: #ed1b24 !important;
+  box-shadow: 0 0 0 2px rgba(237, 27, 36, 0.2) !important;
+}
+
+.ant-input-affix-wrapper,
+.ant-select .ant-select-selector {
+  border-radius: 32px !important;
+  height: 48px !important;
+  padding: 0 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+}
+
+/* Regular input styling (non-textarea) */
+.ant-input:not(textarea) {
+  /* border-radius: 32px !important; */
+  height: 48px !important;
+  padding: 0 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+  line-height: 48px !important;
+}
+
+/* Textarea specific styling */
+textarea.ant-input {
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  min-height: 100px !important;
+  resize: vertical !important;
+  height: auto !important;
+}
+
+.ant-input {
+  padding: 0 16px !important;
+  line-height: 56px !important;
+}
+
+.ant-input-affix-wrapper {
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  height: 100% !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix {
+  margin-right: 10px !important;
+}
+
+.ant-input-number {
+  width: 100% !important;
+  border-radius: 32px !important;
+  height: 56px !important;
+}
+
+.ant-input-number .ant-input-number-input {
+  height: 56px !important;
+  padding: 0 16px !important;
+}
+
+/* Focus states */
+.ant-input:focus,
+textarea.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-select-open .ant-select-selector {
+  border-color: #ed1b24 !important;
+  box-shadow: 0 0 0 2px rgba(237, 27, 36, 0.2) !important;
+}
+
+/* Form labels */
+.ant-form-item-label > label {
+  font-weight: 500 !important;
+  color: #4a5568 !important;
+}
+
+/* Form item spacing */
+.ant-form-item {
+  margin-bottom: 24px !important;
+}
+
+/* Or style it */
+.ant-select-arrow {
+  /* color: #1890ff !important; */
+  font-size: 15px !important;
+  /* background-color: red !important; */
+  height: 90% !important;
+}
+
+/* Custom disabled style for AntD Select */
+.ant-select-disabled .ant-select-selector {
+  background: #d3d8e2 !important; /* Your desired background */
+  border-radius: 2em !important; /* Fully rounded */
+  color: #8c97ac !important; /* Muted text color */
+  border: none !important; /* Remove border if needed */
+  box-shadow: none !important;
+}
+
+.ant-select-disabled .ant-select-selection-item {
+  color: #8c97ac !important; /* Muted text color for selected value */
+}
+
+.ant-select-disabled .ant-select-arrow {
+  color: #8c97ac !important; /* Muted arrow color */
+}
+
+/* Error message styling */
+.ant-form-item-explain,
+.ant-form-item-explain-error {
+  position: relative !important;
+  margin-top: 6px !important;
+  font-size: 14px !important;
+  color: #ff4d4f !important;
+  clear: both !important;
+  min-height: 24px !important;
+  z-index: 1 !important;
+}
+
+/* Add space below inputs for error messages */
+.ant-form-item-has-error {
+  margin-bottom: 32px !important;
+}
+
+/* Ensure validation errors are shown above form elements */
+.ant-form-item-has-error .ant-form-item-explain {
+  display: block !important;
+}
+
+/* Make Ant Design Checkbox checkmark and box red */
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #fff !important; /* keep the check itself white */
+}
+.ant-checkbox-checked:hover .ant-checkbox-inner,
+.ant-checkbox-checked:focus .ant-checkbox-inner {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.custom-date-picker {
+  border-radius: 32px !important;
+  height: 48px !important;
+  padding: 0 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: white !important;
+  width: 100% !important;
+}
+
+/* Custom style for AntD Select multiple mode tags */
+.ant-select-multiple .ant-select-selection-item {
+  background: #f6f7f9 !important;
+  border-radius: 12px !important;
+  color: #222 !important;
+  font-size: 16px !important;
+  padding: 0 10px !important;
+  margin-right: 8px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ant-select-multiple .ant-select-selection-item-remove {
+  color: #888 !important;
+  margin-left: 4px !important;
+  font-size: 16px !important;
+}
+
+.ant-select-multiple .ant-select-selection-item-remove:hover {
+  color: #ed1b24 !important;
+}
+
+.ant-select-multiple .ant-select-selector {
+  min-height: 48px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  border-radius: 32px !important;
+  background: #fff !important;
+}
+
+/* Custom alignment for custom-select (AntD Select multiple mode) */
+.custom-select.ant-select-multiple .ant-select-selector {
+  min-height: 48px !important;
+  height: 48px !important;
+  border-radius: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: #fff !important;
+}
+
+.custom-select.ant-select-multiple .ant-select-selection-overflow {
+  display: flex !important;
+  align-items: center !important;
+  height: 48px !important;
+}
+
+.custom-select.ant-select-multiple .ant-select-selection-item {
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.custom-select .ant-select-arrow {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  right: 16px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto 0 !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+}
+
+/* RTL support for select arrow */
+[dir="rtl"] .custom-select .ant-select-arrow {
+  right: auto !important;
+  left: 16px !important;
+}
+
+/* General RTL support for all select arrows */
+[dir="rtl"] .ant-select-arrow {
+  right: auto !important;
+  left: 16px !important;
+}

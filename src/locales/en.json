@@ -1,1 +1,24 @@
-{}
+{
+    "update": "Update",
+    "delete": "Delete",
+    "add_new": "Add New",
+    "search": "Search...",
+    "no_data": "No data available",
+    "loading": "Loading...",
+    "search_placeholder": "Search...",
+    "branch": "Branch",
+    "add_branch": "Add Branch",
+    "add_branch_sub_text": "Add a new branch to your organization",
+    "listing_count": "Listing Count",
+    "agents_count": "Agents Count",
+    "status": "Status",
+    "main": "Main",
+    "active": "Active",
+    "phone": "Phone",
+    "address": "Address",
+    "branchNamePlaceholder": "Enter branch name",
+    "branchPhonePlaceholder": "Enter phone number",
+    "branchAddressPlaceholder": "Enter branch address",
+    "branches_title": "No Branches Found",
+    "branches_description": "Start by creating your first branch to manage your organization"
+}

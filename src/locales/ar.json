@@ -1,1 +1,24 @@
-{}
+{
+    "update": "تحديث",
+    "delete": "حذف",
+    "add_new": "إضافة جديد",
+    "search": "بحث...",
+    "no_data": "لا توجد بيانات متاحة",
+    "loading": "جار التحميل...",
+    "search_placeholder": "بحث...",
+    "branch": "الفرع",
+    "add_branch": "إضافة فرع",
+    "add_branch_sub_text": "أضف فرعًا جديدًا إلى مؤسستك",
+    "listing_count": "عدد القوائم",
+    "agents_count": "عدد الوكلاء",
+    "status": "الحالة",
+    "main": "رئيسي",
+    "active": "نشط",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "branchNamePlaceholder": "أدخل اسم الفرع",
+    "branchPhonePlaceholder": "أدخل رقم الهاتف",
+    "branchAddressPlaceholder": "أدخل عنوان الفرع",
+    "branches_title": "لم يتم العثور على فروع",
+    "branches_description": "ابدأ بإنشاء فرعك الأول لإدارة مؤسستك"
+}
