@@ -25,7 +25,7 @@ export default function ClientLayout({ children, mainContentStyle }: LayoutProps
 
   const handleSidebarToggle = () => setIsSidebarCollapsed(!isSidebarCollapsed);
 
-  return (<>main</>)
+  // return (<>main</>)
 
   return (
     <div className="flex h-screen relative">
