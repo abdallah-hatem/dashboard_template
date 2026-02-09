@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Table as AntTable,
   Spin,
@@ -123,8 +123,6 @@ export interface ITableProps<T = any> {
 }
 
 const Table = <T extends object>({
-  onResetFilter,
-  onApplyFilter,
   columns = [],
   dataSource,
   loading = false,
@@ -158,36 +156,12 @@ const Table = <T extends object>({
   createButtonHref,
   searchValue = "",
   onSearchChange,
-  canCreate = true,
-  canUpdate = true,
-  canDelete = true,
   formRefAdd,
   formRefEdit,
   sortable = false,
   onSort,
   currentSort = {},
-  showStatusFilter = false,
-  statuses = [],
-  selectedStatus,
-  onStatusSelect,
-  // Combined tabbed filter
-  showTabbedFilter = false,
-  projectNames = [],
-  onProjectSelect,
-  projectTypes = [],
-  onProjectTypeSelect,
   hideSearch = false,
-  // Date range filter props
-  showDateFilter = false,
-  startDate,
-  endDate,
-  onDateRangeChange,
-  onPdfDownload,
-  topBarChildren,
-  tabsGeneric,
-  FilterDropdown = false,
-  dropDownOptions = [],
-  showExport,
   onCreateRef,
   genericFilters,
   rowSelection,
@@ -195,8 +169,6 @@ const Table = <T extends object>({
   emptyStateTitle,
   emptyStateDescription,
   emptyStateIcon,
-  advancedFilters,
-  hasFilters,
   searchPlaceholder,
   searchStyleTw,
 }: ITableProps<T>) => {
@@ -353,33 +325,10 @@ const Table = <T extends object>({
         <TopBar
           searchStyleTw={searchStyleTw}
           searchPlaceholder={searchPlaceholder}
-          showExport={showExport}
-          onResetFilter={onResetFilter}
-          onApplyFilter={onApplyFilter}
-          hasFilters={hasFilters}
-          tabsGeneric={tabsGeneric}
-          showCreateButton={addButton}
-          onCreate={handleCreate}
           searchValue={searchValue}
           onSearchChange={onSearchChange}
-          showTabbedFilter={showTabbedFilter}
-          projectNames={projectNames}
-          onProjectSelect={onProjectSelect}
-          projectTypes={projectTypes}
-          onProjectTypeSelect={onProjectTypeSelect}
-          statuses={statuses}
-          onStatusSelect={onStatusSelect}
           hideSearch={hideSearch}
-          showDateFilter={showDateFilter}
-          FilterDropdown={FilterDropdown}
-          dropDownOptions={dropDownOptions}
-          startDate={startDate}
-          endDate={endDate}
-          onDateRangeChange={onDateRangeChange}
-          onPdfDownload={onPdfDownload}
-          children={topBarChildren}
           genericFilters={genericFilters}
-          advancedFilters={advancedFilters}
         />
       )}
 

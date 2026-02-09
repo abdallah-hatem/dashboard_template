@@ -40,18 +40,38 @@ export default function TestClient({ data, meta }: TestsClientProps) {
     // return await DELETE_BRANCH({ id: String(id) });
   };
 
+  const filters = [
+    {
+      filterKey: "branch_id",
+      label: "all_branches",
+      options: [{ label: "all_branches", value: "" }],
+    },
+    {
+      filterKey: "status",
+      label: "status",
+      options: [
+        { label: "pending", value: "Pending" },
+        { label: "incomplete_profile", value: "InComplete Profile" },
+        { label: "active", value: "Active" },
+        { label: "package_expired", value: "Package Expired" },
+        { label: "application_not_paid", value: "Application Not Paid" },
+      ],
+    },
+  ];
+
   return (
     <>
       <Table
-        title={t("branch")}
+        title={"branch"}
         columns={columns}
         dataSource={data}
         loading={false}
-        addButtonText={t("add_branch")}
-        addButtonSubText={t("add_branch_sub_text")}
-        searchPlaceholder={t("search_placeholder")}
+        addButtonText={"add_branch"}
+        addButtonSubText={"add_branch_sub_text"}
+        searchPlaceholder={"search_placeholder"}
         rowKey="id"
         actions={actions}
+        genericFilters={filters}
         pagination={{
           pageSize: meta?.per_page,
           total: meta?.total,
@@ -64,8 +84,8 @@ export default function TestClient({ data, meta }: TestsClientProps) {
             router.replace(`/branches?${params.toString()}`, { scroll: false });
           },
         }}
-        emptyStateTitle={t("branches_title")}
-        emptyStateDescription={t("branches_description")}
+        emptyStateTitle={"branches_title"}
+        emptyStateDescription={"branches_description"}
         emptyStateIcon={<></>}
         searchable
         searchValue={searchValue}
